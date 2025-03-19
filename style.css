@@ -1,0 +1,527 @@
+/* ======== בסיס ======== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: right;
+    direction: rtl;
+    background-color: #f5f5f5;
+}
+
+/* ======== HEADER ======== */
+.main-header {
+    display: flex;
+    justify-content:space-between;
+    background:rgba(44, 62, 80, 0.8); 
+    color: white;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* לוגו וכפתור המבורגר בתוך דיב עם רווח ביניהם */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* 🔹 רווח גדול יותר בין הלוגו להמבורגר 🔹 */
+}
+
+/* לוגו טקסטואלי */
+.logo-text {
+    font-size: 2rem; /* גודל טקסט */
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px; /* מרווח בין אותיות */
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+/* שינוי צבע בהובר */
+.logo-text:hover {
+    color: #ffcc00;
+}
+
+/* תפריט הניווט */
+.main-nav {
+    flex: 2;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.main-nav li {
+    display: inline-block;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+/* כפתור המבורגר */
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 30px 100px; /* 🔹 רווח פנימי להמבורגר 🔹 */
+    display: none; /* מוסתר בדסקטופ */
+}
+
+/* ======== עיצוב רספונסיבי ======== */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 90px; /* לוגו קטן יותר בנייד */
+    }
+
+    .hamburger {
+        display: block; /* מופיע בנייד */
+    }
+
+    .header-left {
+        gap: 70px; /* 🔹 רווח גדול יותר במסכים קטנים 🔹 */
+        margin-top: 10px;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: rgba(81, 81, 130, 0.9);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-nav.open {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .main-nav li {
+        display: block;
+    }
+
+    .main-nav a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+    }
+}
+
+
+/* ======== HERO SECTION ======== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    background: url('hero.jpg') center/cover no-repeat;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* שכבת הרקע שמוסיפה עומק לטקסט */
+.hero-overlay {
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(44, 62, 80, 0.8); /* כהה יותר לשיפור הקריאות */
+    text-align: center;
+    max-width: 750px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* כותרת ההירו */
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* פסקה בהירו */
+.hero p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* כפתור הנעה לפעולה */
+.cta-button {
+    background: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(255, 204, 0, 0.3);
+}
+
+/* אפקט בהובר */
+.cta-button:hover {
+    background: #e6b800;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(255, 204, 0, 0.5);
+}
+
+/* רספונסיביות למסכים קטנים */
+@media (max-width: 768px) {
+    .hero {
+        height: 150px;
+        margin-right: 10px;
+    }
+
+    .hero-overlay {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero-overlay {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+
+
+/* ======== SECTIONS ======== */
+section {
+    padding: 50px 20px;
+}
+
+/* מבנה של תוכן + תמונה בכל חלק */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+
+/* תוכן בצד ימין */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* תמונה בצד שמאל */
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== SERVICES ======== */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box i {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+/* ======== GALLERY ======== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== CONTACT - טופס יצירת קשר ======== */
+.contact-section {
+    background: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* כותרת של הטופס */
+.contact-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* טקסט קטן מתחת לכותרת */
+.contact-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* עיצוב שדות הטופס */
+.input-group {
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.contact-section input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* אפקטים על השדות */
+.contact-section input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* עיצוב כפתור שלח */
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* אפקט hover לכפתור */
+.btn-submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ======== FOOTER ======== */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .image img {
+        max-width: 80%;
+    }
+
+    .services-grid {
+        flex-wrap: wrap;
+    }
+
+    .service-box {
+        width: 45%;
+    }
+
+    .gallery img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* התאמות כלליות */
+    body {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        order: -1; /* התמונה תעבור לפני הטקסט */
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        max-width: 90%;
+    }
+
+    /* התאמות לכותרות */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* תפריט ניווט מותאם */
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* התאמות לטופס צור קשר */
+    .contact-section {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .contact-section input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .btn-submit {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    /* התאמות לכפתור CTA */
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    /* התאמות לגלריה */
+    .gallery img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* התאמות נוספות לטלפונים קטנים */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-overlay {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%;
+    }
+
+    .contact-section {
+        width: 90%;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    /* לוגו קטן יותר */
+    .logo img {
+        width: 70px;
+    }
+}
