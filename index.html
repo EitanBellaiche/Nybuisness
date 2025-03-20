@@ -9,102 +9,179 @@
 </head>
 <body>
 
-<header class="main-header" style="background: rgba(44, 62, 80, 0.8); color: white; padding: 20px 0;">
-    <div class="header-left">
-        <div class="logo">
+    <header class="main-header">
+        <div class="header-left">
+            <button class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#services">השירותים שלנו</a></li>
+                <li><a href="#testimonials">לקוחות ממליצים</a></li>
+                <li><a href="#faq">שאלות נפוצות</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="hero">
+        <div class="hero-overlay fade-in">
+            <h1>רוצה לקבל יותר פניות מהלקוחות הנכונים? זה מתחיל כאן !</h1>
+            <h2>אתר טוב הוא איש מכירות שעובד בשבילך 24/7 – יש לך כזה?</h2>
+            <p>
+                ב-<strong>ClickToLead</strong> אנו מתמחים בתכנון, עיצוב ופיתוח אתרים ודפי נחיתה שמביאים תוצאות.  
+                אנו משלבים חוויית משתמש מתקדמת (UX), עיצוב מודרני ואופטימיזציה שיווקית כדי להגדיל את שיעור ההמרות ולהפוך מבקרים ללקוחות.  
+                האתר שלך הוא הנכס הדיגיטלי החשוב ביותר של העסק, והוא צריך לעבוד עבורך בכל רגע – אנחנו כאן כדי לוודא שזה יקרה.
+            </p>
+            
+            
+    
+            <div class="hero-benefits">
+                <div class="benefit">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>יותר פניות לעסק</h3>
+                    <p>אתר שבנוי נכון הופך מבקרים ללקוחות משלמים.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>מותאם לכל מסך</h3>
+                    <p>אתר שנראה מושלם בכל מכשיר – נייד, טאבלט ומחשב.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-search"></i>
+                    <h3>קידום חכם בגוגל</h3>
+                    <p>אתר שמופיע גבוה בתוצאות החיפוש ומביא תנועה איכותית.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-rocket"></i>
+                    <h3>השקה מהירה</h3>
+                    <p>תוך ימים ספורים האתר שלך מוכן ומתחיל לעבוד.</p>
+                </div>
+            </div>
+    
+            <a href="#contact" class="cta-button">קבלו הצעה מותאמת אישית 🚀</a>
+        </div>
+    </section>
+    
+
+<section id="services" class="services-section">
+    <h2>השירותים שלנו</h2>
+    <p class="services-description">אנו מתמחים בבניית אתרים מותאמים אישית, שיווק דיגיטלי וקידום אורגני - כל מה שצריך כדי להפוך את העסק שלך להצלחה באינטרנט.</p>
+    <div class="services-grid">
+        <div class="service-box">
+            <i class="fas fa-laptop-code"></i>
+            <h3>בניית אתרים</h3>
+            <p>אנחנו מפתחים אתרים מהירים, נגישים ומעוצבים, עם חוויית משתמש מעולה.</p>
+            <ul>
+                <li>אתרים מותאמים אישית</li>
+                <li>שימוש בטכנולוגיות מתקדמות</li>
+                <li>אבטחת מידע ברמה גבוהה</li>
+            </ul>
+        </div>
+        <div class="service-box">
+            <i class="fas fa-chart-line"></i>
+            <h3>קידום ושיווק</h3>
+            <p>שימוש באסטרטגיות מתקדמות כדי להביא יותר לקוחות לעסק שלך.</p>
+            <ul>
+                <li>SEO וקידום אורגני</li>
+                <li>ניהול קמפיינים בגוגל ופייסבוק</li>
+                <li>שיווק באמצעות תוכן</li>
+            </ul>
+        </div>
+        <div class="service-box">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>התאמה לנייד</h3>
+            <p>כל האתרים שלנו מתאימים לכל סוגי המכשירים ומספקים חוויית גלישה אופטימלית.</p>
+            <ul>
+                <li>רספונסיביות מלאה</li>
+                <li>ביצועים מהירים בכל מסך</li>
+                <li>אופטימיזציה לחוויית משתמש</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="testimonials" class="testimonials-section">
+    <h2>לקוחות ממליצים</h2>
+    <p class="testimonials-description">מה הלקוחות שלנו אומרים על ClickToLead?</p>
+    
+    <div class="testimonial-slider">
+        <div class="testimonial">
+            <p>"אתר מקצועי ומעוצב ברמה גבוהה! התוצאה מושלמת."</p>
+            <strong>- מאור בן הרוש</strong>
+            <div class="testimonial-gallery">
+                <img id="yael-gallery" src="img1.jpeg" alt="תמונה 1 של האתר" onclick="openModal(this, 'yael')">
+            </div>
+        </div>
+        
+        <!-- מודל לתצוגת תמונה מוגדלת -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <button class="prev hidden" onclick="prevImage()">&larr;</button>
+            <img class="modal-content" id="modalImage">
+            <button class="next hidden" onclick="nextImage()">&rarr;</button>
+        </div>
+                
+        
+        <div class="testimonial">
+            <p>"אתר מקצועי ומעוצב ברמה גבוהה! התוצאה מושלמת."</p>
+            <strong>- דני לוי</strong>
+        </div>
+        <div class="testimonial">
+            <p>"קיבלנו יותר לידים ולקוחות חדשים! צוות מדהים ומקצועי."</p>
+            <strong>- רועי שמעון</strong>
+        </div>
+        <div class="testimonial">
+            <p>"מעולה! תוך זמן קצר היה לנו אתר עובד ומותאם לעסק שלנו."</p>
+            <strong>- מיכל בר</strong>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="contact-section">
+    <h2>צרו איתנו קשר</h2>
+    <p class="contact-description">רוצים שניצור איתכם קשר? מלאו את הטופס ואנו נחזור אליכם בהקדם.</p>
+
+    <form action="https://formsubmit.co/eitanbellaiche1@gmail.com" method="POST">
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="name" placeholder="שם מלא" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="אימייל" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-comment-dots"></i>
+            <textarea name="message" placeholder="הודעה" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">שלחו עכשיו <i class="fas fa-paper-plane"></i></button>
+    </form>
+
+    <p class="success-message" style="display: none;">✅ תודה! פרטיך נשלחו בהצלחה.</p>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
             <span class="logo-text">ClickToLead</span>
         </div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <p>© 2024 ClickToLead | כל הזכויות שמורות.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61573975607405" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/clicktolead/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/972586890689" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i>
+            </a>        </div>
     </div>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#about">אודות</a></li>
-            <li><a href="#services">השירותים שלנו</a></li>
-            <li><a href="#testimonials">מה הלקוחות אומרים?</a></li>
-            <li><a href="#faq">שאלות נפוצות</a></li>
-            <li><a href="#contact">צרו איתנו קשר</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="hero" style="background: #f8f8f8; color: black; padding: 80px 0;">
-    <div class="hero-overlay fade-in">
-        <h1>ליצור אתר - לבנות הצלחה</h1>
-        <p>
-            אנחנו ב-<strong>ClickToLead</strong> מתמחים בבניית אתרים ודפי נחיתה שמייצרים עבורך <strong>יותר פניות, יותר לקוחות ויותר רווחים!</strong> 
-            עם עיצוב מוקפד, חוויית משתמש חדשנית וכלים שיווקיים מתקדמים – נבנה לך נוכחות דיגיטלית מנצחת!
-        </p>
-        <a href="#contact" class="cta-button">בואו נתחיל 🚀</a>
-    </div>
-</section>
-
-<section id="about" class="about-section" style="background: rgba(44, 62, 80, 0.8); color: white; padding: 80px 0;">
-    <div class="container">
-        <div class="content">
-            <h2>למה לבחור בנו?</h2>
-            <p>
-                ✅ <strong>מומחיות בבניית אתרים</strong> - אתרים מהירים, מותאמים לנייד וידידותיים לקידום בגוגל.<br>
-                ✅ <strong>עיצוב מתקדם</strong> - חוויית משתמש חכמה שמובילה להמרות גבוהות.<br>
-                ✅ <strong>שיווק דיגיטלי מקצועי</strong> - תהליכי אופטימיזציה שמביאים לקוחות לעסק שלך.
-            </p>
-        </div>
-        <div class="image">
-            <img src="background1.png" alt="אודות ClickToLead">
-        </div>
-    </div>
-</section>
-
-<section id="testimonials" class="testimonials-section" style="background: #f8f8f8; color: black; padding: 80px 0;">
-    <div class="container">
-        <h2>מה הלקוחות אומרים?</h2>
-        <div class="testimonial">
-            <p>"האתר ש-ClickToLead בנו עבורנו הפך את העסק שלנו להצלחה מסחררת! התוצאה עלתה על כל הציפיות."</p>
-            <strong>- יעל כהן, בעלת עסק</strong>
-        </div>
-        <div class="testimonial">
-            <p>"שירות מקצועי, מהיר ואיכותי. האתר נראה מדהים ומניב לנו יותר לקוחות מאי פעם! ממליץ בחום."</p>
-            <strong>- דני לוי, יועץ שיווקי</strong>
-        </div>
-    </div>
-</section>
-
-<section id="faq" class="faq-section" style="background: rgba(44, 62, 80, 0.8); color: white; padding: 80px 0;">
-    <div class="container">
-        <h2>שאלות נפוצות</h2>
-        <div class="faq-item">
-            <h3>תוך כמה זמן האתר יהיה מוכן?</h3>
-            <p>זמן פיתוח האתר משתנה בהתאם למורכבות הפרויקט, אך בדרך כלל לוקח בין שבועיים לחודש.</p>
-        </div>
-        <div class="faq-item">
-            <h3>האם האתר יהיה מותאם לנייד?</h3>
-            <p>כן! כל האתרים שלנו רספונסיביים ומותאמים לכל סוגי המסכים – ניידים, טאבלטים ודסקטופ.</p>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="contact-section" style="background: #f8f8f8; color: black; padding: 80px 0;">
-    <div class="contact-container">
-        <h2>צרו איתנו קשר</h2>
-        <p>רוצים אתר מנצח? השאירו פרטים ואנחנו נחזור אליכם עם הצעה משתלמת!</p>
-        <form id="contactForm">
-            <div class="input-group">
-                <input type="text" placeholder="שם מלא" required>
-            </div>
-            <div class="input-group">
-                <input type="email" placeholder="אימייל" required>
-            </div>
-            <div class="input-group">
-                <input type="tel" placeholder="טלפון" required>
-            </div>
-            <button type="submit" class="btn-submit">שלחו עכשיו</button>
-        </form>
-        <p class="success-message" style="display: none;">✅ תודה! פרטיך נשלחו בהצלחה. נחזור אליך בהקדם.</p>
-    </div>
-</section>
-
-<footer class="footer" style="background: rgba(44, 62, 80, 0.8); color: white; padding: 20px; text-align: center;">
-    <p>© 2024 ClickToLead | כל הזכויות שמורות.</p>
 </footer>
+
 
 <script src="script.js"></script>
 </body>
