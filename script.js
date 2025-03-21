@@ -105,3 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("modalImage").src = galleryImages[currentGallery][currentIndex];
   }
   
+  function toggleFAQ(element) {
+    const item = element.parentElement;
+    item.classList.toggle("open");
+  }
+  
