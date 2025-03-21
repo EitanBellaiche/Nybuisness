@@ -29,18 +29,35 @@ body {
     box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
 }
 
-/* לוגו */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+
 .logo-text {
     font-size: 2rem;
     font-weight: bold;
     color: #FFD700; /* זהב */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
     transition: color 0.3s ease-in-out;
-}
-
-.logo-text:hover {
-    color: #FFC107; /* זהב בהיר */
-}
-
+    margin-left: 70px;
+  }
+  
+  .logo-text:hover {
+    color: #FFC107;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
 /* תפריט ניווט במסכים גדולים */
 .main-nav {
     flex: 1;
@@ -121,23 +138,116 @@ body {
     }
 }
 
-/* התאמה למסכים קטנים יותר */
 @media (max-width: 768px) {
     .main-header {
-        flex-direction: row;
-        align-items: center;
-        padding: 10px 20px;
+      flex-direction: column;
+      align-items: stretch;
     }
-
+  
+    .header-container {
+      flex-direction: row-reverse; /* לוגו בימין, המבורגר בשמאל */
+      justify-content: space-between;
+      align-items: center;
+    }
+  
     .logo-text {
-        font-size: 1.8rem;
+      font-size: 1.7rem;
     }
-
+  
     .hamburger {
-        font-size: 1.8rem;
+      font-size: 2rem;
     }
-}
-
+  }
+  
+/* ======== ABOUT SECTION ======== */
+.about-section {
+    background: linear-gradient(135deg, #0A0F2C 0%, #000000 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+  }
+  
+  .about-section h2 {
+    font-size: 2.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  }
+  
+  .about-description {
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #E0E0E0;
+    line-height: 1.8;
+  }
+  
+  .about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .about-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-box:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .about-box i {
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+    color: #FFD700;
+  }
+  
+  .about-box h3 {
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .about-box p {
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #D4D4D4;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 768px) {
+    .about-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-box {
+      width: 90%;
+    }
+  
+    .about-section h2 {
+      font-size: 2.2rem;
+    }
+  
+    .about-description {
+      font-size: 1.2rem;
+    }
+  }
+  
 
 /* ======== HERO SECTION ======== */
 .hero {
@@ -149,6 +259,7 @@ body {
      padding: 5px 0;
     position: relative;
     background: linear-gradient(135deg, #0A0F2C 0%, #000000 100%); /* רקע כהה עם גוון כחול */
+    margin-top: 40px;
 }
 
 /* שכבת ההצללה */
@@ -305,9 +416,11 @@ body {
 .services-section {
     text-align: center;
     padding: 20px 20px;
+    margin-right: 30px;
     background: linear-gradient(135deg, #0A0F2C 0%, #000000 100%);
     color: white;
     box-shadow: 0 -5px 10px rgba(255, 215, 0, 0.2);
+    margin-left: 30px;
 }
 
 /* כותרת ראשית */
@@ -339,7 +452,7 @@ body {
 /* תיבות השירותים */
 .service-box {
     background: rgba(255, 255, 255, 0.08);
-    padding: 25px;
+    padding: 5px;
     border-radius: 12px;
     text-align: center;
     width: 320px;
@@ -616,39 +729,39 @@ body {
 
 /* ======== CONTACT SECTION ======== */
 .contact-section {
-    background: rgba(255, 255, 255, 0.1); /* רקע כהה יותר כדי שיבלט */
+    background: rgba(255, 255, 255, 0.07);
     color: white;
-    padding: 60px 20px;
+    padding: 70px 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 60px auto;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
-    max-width: 600px; /* עדיין שומר על גודל יפה במרכז */
-    margin: auto;
 }
 
-
-/* כותרת ראשית */
 .contact-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #FFD700; /* זהב */
-    margin-bottom: 10px;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    margin-bottom: 15px;
 }
 
-/* תיאור קצר */
-.contact-description p{
-    font-size: 2.3rem;
+.contact-description {
+    font-size: 1.4rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 500px;
-    margin: 10px auto 40px;
     color: #E0E0E0;
+    margin-bottom: 40px;
+    max-width: 520px;
+    margin-inline: auto;
 }
 
 
 /* עיצוב השדות */
 .input-group {
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .contact-section input,
@@ -703,16 +816,17 @@ body {
 /* ======== התאמות רספונסיביות ======== */
 @media (max-width: 768px) {
     .contact-section {
-        width: 90%;
+        width: 75%;
         padding: 50px 20px;
+        
     }
 
     .contact-section h2 {
-        font-size: 2rem;
+        font-size: 5rem;
     }
 
     .contact-description {
-        font-size: 1.2rem;
+        font-size: 3.2rem;
     }
 
     .btn-submit {
@@ -723,11 +837,13 @@ body {
 
 @media (max-width: 480px) {
     .contact-section h2 {
-        font-size: 1.8rem;
+        font-size: 2.8rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .contact-description {
-        font-size: 1rem;
+        font-size: 1.8rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .btn-submit {
@@ -738,88 +854,78 @@ body {
 
 /* ======== FOOTER ======== */
 .footer {
-    background: linear-gradient(135deg, #0A0F2C 0%, #000000 100%);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 -5px 10px rgba(255, 215, 0, 0.2);
-    position: relative;
+    background: linear-gradient(135deg, #0A0F2C, #000000);
+    color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 -4px 15px rgba(255, 215, 0, 0.1);
 }
 
-/* עיצוב התוכן בפוטר */
-.footer-content {
-    max-width: 800px;
+.footer-container {
+    max-width: 1100px;
     margin: auto;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* לוגו בפוטר */
-.footer-logo .logo-text {
-    font-size: 2rem;
+/* לוגו */
+.footer .logo-text {
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #FFD700; /* זהב */
-    transition: color 0.3s ease-in-out;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    margin-bottom: 10px;
 }
 
-/* אפקט hover על הלוגו */
-.footer-logo .logo-text:hover {
-    color: #FFC107;
+/* תיאור */
+.footer-description {
+    color: #CCCCCC;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    max-width: 600px;
 }
 
-/* טקסט זכויות יוצרים */
-.footer p {
-    font-size: 1rem;
-    margin: 10px 0;
-    color: #E0E0E0;
-}
-
-/* קישורים חברתיים */
+/* אייקונים חברתיים */
 .social-links {
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-/* עיצוב האייקונים */
 .social-links a {
     color: white;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 1.6rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* אפקט hover על האייקונים */
 .social-links a:hover {
-    color: #FFD700; /* זהב */
+    color: #FFD700;
     transform: scale(1.2);
 }
 
-/* ======== התאמות רספונסיביות ======== */
-@media (max-width: 768px) {
-    .footer-logo .logo-text {
-        font-size: 1.8rem;
-    }
-
-    .footer p {
-        font-size: 0.9rem;
-    }
-
-    .social-links a {
-        font-size: 1.3rem;
-    }
+/* זכויות יוצרים */
+.footer .copyright {
+    font-size: 0.9rem;
+    color: #aaa;
 }
 
-@media (max-width: 480px) {
-    .footer-logo .logo-text {
-        font-size: 1.5rem;
+/* רספונסיביות */
+@media (max-width: 768px) {
+    .footer .logo-text {
+        font-size: 2rem;
     }
 
-    .footer p {
-        font-size: 0.8rem;
+    .footer-description {
+        font-size: 1rem;
     }
 
     .social-links a {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+    }
+
+    .footer .copyright {
+        font-size: 0.8rem;
     }
 }

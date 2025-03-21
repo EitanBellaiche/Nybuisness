@@ -8,25 +8,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <header class="main-header">
-        <div class="header-left">
-            <button class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div class="header-container">
+          <div class="logo">
+            <span class="logo-text">ClickToLead</span>
+          </div>
+          <button class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      
         <nav class="main-nav">
-            <ul>
-                <li><a href="#about">אודות</a></li>
-                <li><a href="#services">השירותים שלנו</a></li>
-                <li><a href="#testimonials">לקוחות ממליצים</a></li>
-                <li><a href="#faq">שאלות נפוצות</a></li>
-                <li><a href="#contact">צור קשר</a></li>
-            </ul>
+          <ul>
+            <li><a href="#about">אודות</a></li>
+            <li><a href="#services">השירותים שלנו</a></li>
+            <li><a href="#testimonials">לקוחות ממליצים</a></li>
+            <li><a href="#faq">שאלות נפוצות</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+          </ul>
         </nav>
-    </header>
-    
-
+      </header>
+      
     <section class="hero">
         <div class="hero-overlay fade-in">
             <h1>רוצה לקבל יותר פניות מהלקוחות הנכונים? זה מתחיל כאן !</h1>
@@ -66,6 +68,32 @@
         </div>
     </section>
     
+    <section id="about" class="about-section">
+        <h2>מי אנחנו?</h2>
+        <p class="about-description">
+          ClickToLead היא סוכנות דיגיטל שמתמחה ביצירת אתרים ודפי נחיתה שמייצרים תוצאות אמיתיות. 
+          עם ניסיון של שנים בעיצוב, פיתוח ושיווק דיגיטלי – אנחנו עוזרים לעסקים קטנים ובינוניים לבלוט בשוק תחרותי.
+        </p>
+      
+        <div class="about-grid">
+          <div class="about-box">
+            <i class="fas fa-bullseye"></i>
+            <h3>גישה ממוקדת תוצאה</h3>
+            <p>אנחנו לא בונים רק אתר יפה – אנחנו בונים כלי שיווקי שעובד בשבילך 24/7.</p>
+          </div>
+          <div class="about-box">
+            <i class="fas fa-lightbulb"></i>
+            <h3>חשיבה שיווקית</h3>
+            <p>הבנה עמוקה של קהל היעד, מסרים נכונים, ועיצוב שמניע לפעולה.</p>
+          </div>
+          <div class="about-box">
+            <i class="fas fa-handshake"></i>
+            <h3>יחס אישי וליווי צמוד</h3>
+            <p>אנחנו מלווים אותך לאורך כל הדרך – מהרעיון ועד שהאתר באוויר ומתחיל להכניס לידים.</p>
+          </div>
+        </div>
+      </section>
+      
 
 <section id="services" class="services-section">
     <h2>השירותים שלנו</h2>
@@ -108,79 +136,83 @@
 <section id="testimonials" class="testimonials-section">
     <h2>לקוחות ממליצים</h2>
     <p class="testimonials-description">מה הלקוחות שלנו אומרים על ClickToLead?</p>
-    
+  
     <div class="testimonial-slider">
-        <div class="testimonial">
-            <p>"אתר מקצועי ומעוצב ברמה גבוהה! התוצאה מושלמת."</p>
-            <strong>- מאור בן הרוש</strong>
-            <div class="testimonial-gallery">
-                <img id="yael-gallery" src="img1.jpeg" alt="תמונה 1 של האתר" onclick="openModal(this, 'yael')">
-            </div>
+      <!-- מאור -->
+      <div class="testimonial">
+        <p>"אתר מקצועי ומעוצב ברמה גבוהה! התוצאה מושלמת."</p>
+        <strong>- מאור בן הרוש</strong>
+        <div class="testimonial-gallery">
+          <img src="img1.jpeg" alt="תמונה של האתר" onclick="openModal(this, 'maor')">
         </div>
-        
-        <!-- מודל לתצוגת תמונה מוגדלת -->
-        <div id="imageModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <button class="prev hidden" onclick="prevImage()">&larr;</button>
-            <img class="modal-content" id="modalImage">
-            <button class="next hidden" onclick="nextImage()">&rarr;</button>
+      </div>
+  
+      <!-- ירין -->
+      <div class="testimonial">
+        <p>"השירות היה ברמה הכי גבוהה שיכולה להיות!"</p>
+        <strong>- ירין אדלר</strong>
+        <div class="testimonial-gallery">
+          <img src="yarin1.png" alt="תמונה של האתר" onclick="openModal(this, 'yarin')">
         </div>
-                
-        
-        <div class="testimonial">
-            <p>"אתר מקצועי ומעוצב ברמה גבוהה! התוצאה מושלמת."</p>
-            <strong>- דני לוי</strong>
-        </div>
-        <div class="testimonial">
-            <p>"קיבלנו יותר לידים ולקוחות חדשים! צוות מדהים ומקצועי."</p>
-            <strong>- רועי שמעון</strong>
-        </div>
-        <div class="testimonial">
-            <p>"מעולה! תוך זמן קצר היה לנו אתר עובד ומותאם לעסק שלנו."</p>
-            <strong>- מיכל בר</strong>
-        </div>
+      </div>
     </div>
-</section>
+  
+    <!-- מודל גלריה -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <button class="prev hidden" onclick="prevImage()">&larr;</button>
+      <img class="modal-content" id="modalImage">
+      <button class="next hidden" onclick="nextImage()">&rarr;</button>
+    </div>
+  </section>
+  
 
+  <section id="contact" class="contact-section">
+    <h2>דברו איתנו</h2>
+    <p class="contact-description">רוצים לקבל הצעת מחיר או ייעוץ חינם? מלאו את הפרטים ואנחנו נחזור אליכם ממש בקרוב.</p>
 
-<section id="contact" class="contact-section">
-    <h2>צרו איתנו קשר</h2>
-    <p class="contact-description">רוצים שניצור איתכם קשר? מלאו את הטופס ואנו נחזור אליכם בהקדם.</p>
-
-    <form action="https://formsubmit.co/eitanbellaiche1@gmail.com" method="POST">
+    <form action="https://formsubmit.co/eitanbellaiche1@gmail.com" method="POST" id="contactForm">
         <div class="input-group">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user icon"></i>
             <input type="text" name="name" placeholder="שם מלא" required>
         </div>
         <div class="input-group">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-envelope icon"></i>
             <input type="email" name="email" placeholder="אימייל" required>
         </div>
         <div class="input-group">
-            <i class="fas fa-comment-dots"></i>
-            <textarea name="message" placeholder="הודעה" required></textarea>
+            <i class="fas fa-comment icon"></i>
+            <textarea name="message" placeholder="איך נוכל לעזור לך?" required></textarea>
         </div>
         <button type="submit" class="btn-submit">שלחו עכשיו <i class="fas fa-paper-plane"></i></button>
     </form>
 
-    <p class="success-message" style="display: none;">✅ תודה! פרטיך נשלחו בהצלחה.</p>
+    <p class="success-message" style="display: none;">✅ תודה! פנייתכם התקבלה ונחזור אליכם בהקדם.</p>
 </section>
 
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-logo">
-            <span class="logo-text">ClickToLead</span>
-        </div>
-        <p>© 2024 ClickToLead | כל הזכויות שמורות.</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/profile.php?id=61573975607405" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/clicktolead/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://wa.me/972586890689" target="_blank" class="whatsapp-link">
-                <i class="fab fa-whatsapp"></i>
-            </a>        </div>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span class="logo-text">ClickToLead</span>
+      </div>
+  
+      <p class="footer-description">
+        מתמחים בבניית אתרים ודפי נחיתה ממירים – שיעבדו בשבילך 24/7 ויביאו תוצאות.
+      </p>
+  
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61573975607405" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/clicktolead/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/972586890689" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+  
+      <p class="copyright">
+        © 2024 ClickToLead | כל הזכויות שמורות.
+      </p>
     </div>
-</footer>
+  </footer>
+  
 
 
 <script src="script.js"></script>
